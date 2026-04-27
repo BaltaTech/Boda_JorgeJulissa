@@ -46,7 +46,6 @@
             min-height: 100vh;
         }
 
-        /* Fondo acuarela mejorado con brillo */
         .fondo-acuarela {
             position: fixed;
             top: 0;
@@ -71,7 +70,6 @@
             mix-blend-mode: multiply;
         }
 
-        /* Partículas flotantes */
         .fondo-acuarela::after {
             content: "";
             position: absolute;
@@ -130,11 +128,6 @@
             letter-spacing: 8px;
         }
         
-        @keyframes textoFondoFlotar {
-            0%, 100% { transform: rotate(-15deg) scale(1.2) translateY(0px); opacity: 0.6; }
-            50% { transform: rotate(-15deg) scale(1.23) translateY(-15px); opacity: 0.9; }
-        }
-        
         @media (max-width: 768px) {
             .texto-fondo-contenido {
                 font-size: 2rem;
@@ -150,7 +143,6 @@
             }
         }
 
-        /* Decoraciones florales con animación */
         .floral-top-right {
             position: absolute;
             top: 0;
@@ -211,7 +203,6 @@
             50% { transform: translateY(-15px) rotate(5deg); opacity: 0.3; }
         }
 
-        /* SOBRE - Diseño mejorado con más brillo */
         .sobre-container {
             position: fixed;
             top: 0;
@@ -451,7 +442,6 @@
             .texto-abrir { bottom: -60px; padding: 8px 20px; font-size: 0.7rem; letter-spacing: 3px; }
         }
 
-        /* Contenedor principal - efecto vidrio premium */
         .invitacion-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -465,7 +455,6 @@
             border: var(--glass-border);
         }
 
-        /* Sección hero con overlay sutil */
         .hero-section { 
             position: relative; 
             width: 100%; 
@@ -493,7 +482,6 @@
             display: block; 
         }
 
-        /* Welcome section vidrioso */
         .welcome-section {
             padding: 5rem 2rem;
             text-align: center;
@@ -601,7 +589,6 @@
             font-weight: 500;
         }
 
-        /* Secciones generales */
         .seccion { 
             padding: 5rem 2rem; 
             position: relative; 
@@ -639,7 +626,6 @@
             50% { opacity: 1; transform: translateX(-50%) scale(1.1); }
         }
 
-        /* Tarjetas de cita y cristal */
         .cita-card {
             max-width: 800px;
             margin: 0 auto;
@@ -665,7 +651,6 @@
             box-shadow: 0 25px 40px -15px rgba(0,0,0,0.2);
         }
 
-        /* Historia cards con efecto vidrio */
         .historia-card {
             display: flex;
             flex-wrap: wrap;
@@ -712,7 +697,6 @@
             50% { transform: scale(1.1); }
         }
 
-        /* Hoteles grid */
         .hoteles-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -862,128 +846,232 @@
             margin: 2.5rem 0;
         }
         
-        .mensaje-publico-card {
-            background: rgba(255, 245, 240, 0.4);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            padding: 1.5rem;
+        .mensaje-profesional-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,245,240,0.6));
+            backdrop-filter: blur(16px);
             border-radius: 32px;
-            box-shadow: var(--sombra-vidrio);
-            border: 1px solid rgba(255,255,255,0.6);
-            transition: var(--transition-suave);
+            padding: 1.8rem;
+            border-left: 6px solid var(--fucsia);
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
         }
         
-        .mensaje-publico-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 245, 240, 0.55);
-        }
-        
-        .mensaje-publico-card strong {
-            color: var(--fucsia);
-            font-size: 1.1rem;
-            font-family: 'Montserrat', sans-serif;
+        .mensaje-profesional-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 35px rgba(0,0,0,0.12);
         }
         
         .nuevo-mensaje-publico, .confirmacion-form {
-            max-width: 550px;
+            max-width: 600px;
             margin: 2rem auto;
-            background: rgba(255, 245, 240, 0.35);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            background: rgba(255, 248, 245, 0.5);
+            backdrop-filter: blur(18px);
             padding: 2rem;
-            border-radius: 40px;
-            border: 1px solid rgba(255,255,255,0.5);
+            border-radius: 48px;
+            border: 1px solid rgba(255,255,255,0.6);
             box-shadow: var(--sombra-vidrio);
         }
         
-        .nuevo-mensaje-publico input, .nuevo-mensaje-publico textarea,
-        .confirmacion-form select, .confirmacion-form input {
-            width: 100%;
-            padding: 0.9rem;
-            margin-bottom: 1rem;
-            border: 1px solid rgba(212,88,106,0.3);
-            border-radius: 40px;
-            background: rgba(255, 255, 255, 0.85);
-            font-family: 'Montserrat', sans-serif;
-            transition: all 0.3s ease;
+        .titulo-form {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            color: var(--fucsia);
+            margin-bottom: 1.8rem;
+            font-size: 1.6rem;
         }
         
-        .nuevo-mensaje-publico input:focus, .nuevo-mensaje-publico textarea:focus,
-        .confirmacion-form select:focus, .confirmacion-form input:focus {
+        .input-moderno, .textarea-moderno, .select-moderno {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            margin-bottom: 1.2rem;
+            border: 1px solid rgba(212,88,106,0.3);
+            border-radius: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.25s ease;
+            font-size: 0.95rem;
+        }
+        
+        .textarea-moderno {
+            border-radius: 32px;
+            resize: vertical;
+        }
+        
+        .input-moderno:focus, .textarea-moderno:focus, .select-moderno:focus {
             outline: none;
             border-color: var(--fucsia);
             box-shadow: 0 0 0 3px rgba(212,88,106,0.2);
             background: white;
         }
-
-        .modal-agradecimiento {
-            position: fixed;
-            top: 0;
-            left: 0;
+        
+        .btn-enviar-elegante {
+            background: linear-gradient(105deg, #D4586A, #B84A5C);
+            border: none;
+            color: white;
+            padding: 0.9rem;
+            border-radius: 60px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
             width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(16px);
+            transition: all 0.25s;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(212,88,106,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-enviar-elegante:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(105deg, #C24A5E, #A03E50);
+            box-shadow: 0 8px 20px rgba(212,88,106,0.4);
+        }
+        
+        /* ANIMACIONES PROFESIONALES PARA CONFIRMACIONES */
+        .toast-profesional {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(150px);
+            z-index: 10001;
+            min-width: 300px;
+            max-width: 90%;
+            background: rgba(255, 248, 245, 0.98);
+            backdrop-filter: blur(24px);
+            border-radius: 60px;
+            padding: 1.2rem 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255,255,255,0.5);
+            transition: transform 0.5s cubic-bezier(0.34, 1.2, 0.64, 1);
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            pointer-events: none;
+        }
+        
+        .toast-profesional.toast-visible {
+            transform: translateX(-50%) translateY(0);
+        }
+        
+        .toast-content-profesional {
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 99999;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.4s ease;
+            gap: 15px;
+            flex-wrap: wrap;
         }
-
-        .modal-agradecimiento.visible {
-            opacity: 1;
-            visibility: visible;
+        
+        .toast-icon-animado {
+            font-size: 2rem;
+            animation: iconPop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
-
-        .modal-content {
-            background: rgba(255, 245, 240, 0.98);
-            backdrop-filter: blur(32px);
-            padding: 2.5rem;
-            border-radius: 56px;
-            text-align: center;
-            max-width: 420px;
-            width: 90%;
-            border: 1px solid rgba(255,255,255,0.6);
-            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255,255,255,0.8);
-            transform: scale(0.9);
-            transition: transform 0.5s cubic-bezier(0.34, 1.2, 0.64, 1);
+        
+        .toast-texto {
+            flex: 1;
         }
-
-        .modal-agradecimiento.visible .modal-content {
-            transform: scale(1);
-        }
-
-        .modal-content i {
-            font-size: 4rem;
-            color: #D4586A;
-            margin-bottom: 1rem;
-            animation: latidoModal 0.6s ease-in-out;
-        }
-
-        @keyframes latidoModal {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-        }
-
-        .modal-content .btn-cerrar {
-            background: linear-gradient(135deg, #D4586A, #E8A35E);
-            color: white;
-            border: none;
-            padding: 0.8rem 2rem;
-            border-radius: 60px;
+        
+        .toast-titulo {
+            font-weight: 700;
             font-size: 1rem;
-            cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
-            transition: all 0.3s ease;
-            font-weight: 500;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
         }
-
-        .modal-content .btn-cerrar:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(212, 88, 106, 0.4);
+        
+        .toast-mensaje {
+            font-size: 0.85rem;
+            color: var(--texto-oscuro);
+            line-height: 1.4;
+        }
+        
+        @keyframes iconPop {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        /* Efecto de brillo en el botón al hacer clic */
+        .btn-enviar-elegante:active {
+            transform: scale(0.96);
+        }
+        
+        /* Animación de carga en el botón */
+        .btn-enviar-elegante .spinner {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Animación de confeti mejorada */
+        .confeti {
+            position: fixed;
+            width: 12px;
+            height: 18px;
+            z-index: 99999;
+            pointer-events: none;
+            animation: caerConfeti 3s linear forwards;
+            border-radius: 2px;
+        }
+        
+        @keyframes caerConfeti {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+        
+        /* Animación de carta flotante para mensajes */
+        @keyframes cartaVuela {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            30% { transform: translateY(-30px) scale(1.05); opacity: 0.9; }
+            100% { transform: translateY(-200px) scale(1.2); opacity: 0; }
+        }
+        
+        .carta-voladora {
+            position: fixed;
+            font-size: 3rem;
+            z-index: 10002;
+            pointer-events: none;
+            animation: cartaVuela 0.8s ease-out forwards;
+        }
+        
+        /* Brillo en el contenedor del mensaje nuevo */
+        .mensaje-agregado {
+            animation: brilloMensaje 0.6s ease-out;
+        }
+        
+        @keyframes brilloMensaje {
+            0% { background: rgba(212,88,106,0.2); transform: scale(0.98); }
+            50% { background: rgba(212,88,106,0.4); transform: scale(1.01); }
+            100% { background: rgba(212,88,106,0); transform: scale(1); }
+        }
+        
+        .confirmacion-exitosa-card {
+            background: rgba(107, 140, 107, 0.15);
+            backdrop-filter: blur(12px);
+            border-radius: 40px;
+            padding: 1.5rem;
+            text-align: center;
+            border-left: 6px solid #6B8C6B;
+            margin-bottom: 1.5rem;
+            animation: slideInConfirm 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        @keyframes slideInConfirm {
+            from {
+                opacity: 0;
+                transform: translateY(-30px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
         }
 
         .footer-floral {
@@ -1019,20 +1107,6 @@
             background: rgba(232,163,94,0.95) !important;
         }
 
-        @keyframes flotarFlor {
-            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.2; }
-            50% { transform: translateY(-15px) rotate(10deg); opacity: 0.4; }
-        }
-
-        @keyframes flotar {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
-        [data-aos] {
-            transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
         .telefono-box {
             background: linear-gradient(135deg, rgba(212,88,106,0.9), rgba(232,163,94,0.9));
             backdrop-filter: blur(8px);
@@ -1042,54 +1116,25 @@
         .telefono-box:hover {
             transform: translateY(-3px);
         }
-        
-        /* Animación de confeti mejorada */
-        .confeti {
-            position: fixed;
-            width: 12px;
-            height: 18px;
-            z-index: 99999;
-            pointer-events: none;
-            animation: caerConfeti 3s linear forwards;
-            border-radius: 2px;
-        }
 
-        @keyframes caerConfeti {
-            0% {
-                transform: translateY(-100vh) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(100vh) rotate(360deg);
-                opacity: 0;
-            }
+        [data-aos] {
+            transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
         }
         
-        /* Notificación flotante */
-        .notificacion-flotante {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #D4586A;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.85rem;
-            z-index: 10001;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            animation: subirNotificacion 0.3s ease;
-        }
-
-        @keyframes subirNotificacion {
-            from {
-                opacity: 0;
-                transform: translateX(-50%) translateY(20px);
+        @media (max-width: 640px) {
+            .toast-profesional {
+                bottom: 20px;
+                padding: 0.9rem 1.5rem;
+                min-width: 260px;
             }
-            to {
-                opacity: 1;
-                transform: translateX(-50%) translateY(0);
+            .toast-icon-animado {
+                font-size: 1.5rem;
+            }
+            .toast-titulo {
+                font-size: 0.85rem;
+            }
+            .toast-mensaje {
+                font-size: 0.75rem;
             }
         }
     </style>
@@ -1112,7 +1157,7 @@
                 <div class="sello-floral"><i class="fas fa-heart"></i></div>
                 <div class="direccion">
                     <div class="nombre">Julissa & Jorge</div>
-                    <div class="para" id="invitadoNombrePara">Cargando...</div>
+                    <div class="para" id="invitadoNombrePara">Tienes un mensaje nuevo</div>
                 </div>
             </div>
             <div class="texto-abrir"><i class="fas fa-envelope-open"></i> Toca para abrir</div>
@@ -1157,7 +1202,7 @@
             <section class="seccion" data-aos="fade-up">
                 <div class="cita-card">
                     <i class="fas fa-feather-alt" style="font-size: 2rem; color: var(--fucsia); margin-bottom: 1rem; display: block;"></i>
-                    <p>"El amor es paciente, es bondadoso... No se comporta con rudeza, no es egoísta."</p>
+                    <p>"El amor es paciente, es bondadoso. El amor no es envidioso ni orgulloso. No se comporta con rudeza, no es egoísta, no se enoja fácilmente, no guarda rencor.</p>
                     <p style="margin-top: 0.5rem;">— Corintios 13:4-5</p>
                 </div>
                 <div style="margin-top: 2rem; border-radius: 40px; overflow: hidden; box-shadow: var(--sombra-relieve);">
@@ -1166,7 +1211,6 @@
             </section>
 
             <section class="seccion" data-aos="fade-up">
-               
                 <div style="border-radius: 40px; overflow: hidden; box-shadow: var(--sombra-relieve);">
                     <img src="Fotos/3.jpg" alt="Foto 3" style="width: 100%; height: auto; display: block;">
                 </div>
@@ -1266,7 +1310,9 @@
                 <div style="text-align: center;">
                     <div class="mensaje-opcional" style="background: rgba(255,245,240,0.8); backdrop-filter: blur(8px); border-radius: 80px; padding: 1rem 2rem; display: inline-block; margin: 1rem auto; text-align: center; border: 1px solid rgba(212,88,106,0.3); box-shadow: var(--sombra-suave);">
                         <i class="fas fa-heart" style="color: #D4586A; margin-right: 0.5rem;"></i>
-                        <span style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;">El regalo es opcional, lo más importante para nosotros es tu compañía</span>
+                        <span style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;">Su presencia es el mejor regalo, pero si desean contribuir a nuestra luna de miel, agradecemos su apoyo.
+Porque el amor merece ser celebrado.
+¡Acompañanos!</span>
                         <i class="fas fa-smile-wink" style="color: #E8A35E; margin-left: 0.5rem;"></i>
                     </div>
                 </div>
@@ -1280,42 +1326,34 @@
                 <h2 class="seccion-titulo">Deja tu <span>Mensaje</span> de Bendición</h2>
                 <div class="mensajes-publicos-grid" id="mensajesPublicosGrid"></div>
                 <div class="nuevo-mensaje-publico">
-                    <input type="text" id="mensajePublicoNombre" placeholder="Tu nombre">
-                    <textarea id="mensajePublicoTexto" placeholder="Escribe tu mensaje de bendición para los novios..." rows="3"></textarea>
-                    <button class="btn-copiar" onclick="agregarMensajePublico()">Enviar mensaje</button>
+                    <div class="titulo-form">✍️ Escribe tu bendición</div>
+                    <input type="text" id="mensajePublicoNombre" class="input-moderno" placeholder="Tu nombre completo">
+                    <textarea id="mensajePublicoTexto" class="textarea-moderno" placeholder="Escribe un mensaje de amor y buenos deseos para Julissa y Jorge..." rows="3"></textarea>
+                    <button class="btn-enviar-elegante" id="btnEnviarMensaje" onclick="agregarMensajePublico()"><i class="fas fa-feather-alt"></i> Enviar bendición</button>
                 </div>
             </section>
 
             <section class="seccion" data-aos="fade-up">
                 <h2 class="seccion-titulo">Confirma <span>tu asistencia</span></h2>
-                <div class="confirmacion-form" style="max-width: 500px; margin: 0 auto; padding: 2rem;">
-                    <div id="mensajeConfirmacionPrevia" style="display:none; margin-bottom:1rem; background:rgba(232,245,233,0.9); padding:1rem; border-radius:30px;">
-                        ✅ ¡Gracias por confirmar tu asistencia!
+                <div class="confirmacion-form" style="max-width: 550px;">
+                    <div id="mensajeConfirmacionPrevia" style="display:none;" class="confirmacion-exitosa-card">
+                        <i class="fas fa-check-circle" style="font-size: 2rem; color: #6B8C6B;"></i>
+                        <p style="margin-top:0.5rem; font-weight:500;">✅ ¡Gracias por confirmar tu asistencia! <br> ¡Te esperamos con mucha alegría!</p>
                     </div>
                     <div id="formularioConfirmacion">
-                        <input type="text" id="confirmacionNombre" placeholder="Escribe tu nombre completo" style="width:100%; margin-bottom:1rem; padding:0.8rem; border-radius:30px; border:1px solid rgba(212,88,106,0.3);">
-                        <select id="asistencia" style="width:100%; margin-bottom:1rem; padding:0.8rem; border-radius:30px; border:1px solid rgba(212,88,106,0.3);">
+                        <div class="titulo-form">🎟️- Cuéntanos si nos acompañarás</div>
+                        <input type="text" id="confirmacionNombre" class="input-moderno" placeholder="Tu nombre completo">
+                        <select id="asistencia" class="select-moderno">
                             <option value="">-- ¿Vas a asistir? --</option>
                             <option value="si">✅ Sí, voy a asistir</option>
                             <option value="no">❌ No puedo asistir</option>
                         </select>
-                        <button class="btn-copiar" onclick="enviarConfirmacion()" style="width:100%;">Enviar confirmación</button>
+                        <button class="btn-enviar-elegante" id="btnConfirmarAsistencia" onclick="enviarConfirmacion()"><i class="fas fa-envelope"></i> Confirmar asistencia</button>
                     </div>
                 </div>
             </section>
 
             <div id="tooltipCopiar" style="position:fixed; bottom:20px; left:50%; background:var(--texto-oscuro); color:white; padding:0.5rem 1rem; border-radius:30px; opacity:0; transition:0.2s; transform:translateX(-50%); z-index:1000;">¡Copiado!</div>
-
-            <div class="modal-agradecimiento" id="modalAgradecimiento">
-                <div class="modal-content">
-                    <i class="fas fa-heart"></i>
-                    <h2 id="modalTitulo"></h2>
-                    <p id="modalMensaje"></p>
-                    <button class="btn-cerrar" onclick="cerrarModalYVolverAlInicio()">
-                        <i class="fas fa-check"></i> Continuar
-                    </button>
-                </div>
-            </div>
 
             <footer class="footer-floral">
                 <p>Julissa & Jorge · 19 Septiembre 2026 · Jalpa de Cánovas, Guanajuato</p>
@@ -1343,7 +1381,7 @@
             } else {
                 audio.play().catch(e => {
                     console.log('Error al reproducir audio:', e);
-                    mostrarNotificacion('⚠️ No se pudo cargar la música');
+                    mostrarToastProfesional('⚠️ No se pudo cargar la música', 'error', 'Aviso');
                 });
                 audioActivo = true;
                 btnAudio.innerHTML = '<i class="fas fa-stop"></i> Detener música';
@@ -1400,114 +1438,139 @@
             let mensajes = JSON.parse(localStorage.getItem('mensajesPublicos')) || [];
             const grid = document.getElementById('mensajesPublicosGrid');
             if (mensajes.length === 0) {
-                grid.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--texto-oscuro);">Sé el primero en dejar un mensaje de bendición 💝</div>';
+                grid.innerHTML = '<div style="text-align: center; padding: 2rem; background: rgba(255,248,240,0.6); border-radius: 48px;">✨ Sé el primero en dejar una hermosa bendición para los novios ✨</div>';
                 return;
             }
-            grid.innerHTML = mensajes.map((m) => `
-                <div class="mensaje-publico-card" data-aos="fade-up">
-                    <strong>${escapeHtml(m.nombre)}</strong><br>
-                    <small>${m.fecha}</small>
-                    <p>"${escapeHtml(m.texto)}"</p>
+            grid.innerHTML = mensajes.map((m, idx) => `
+                <div class="mensaje-profesional-card" data-aos="fade-up" data-idx="${idx}">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+                        <strong style="color: var(--fucsia); font-family: 'Montserrat', sans-serif;">${escapeHtml(m.nombre)}</strong>
+                        <small style="color: #7a6b60; font-size:0.7rem;">${m.fecha}</small>
+                    </div>
+                    <p style="font-family: 'Cormorant Garamond', serif; font-size:1.1rem; line-height:1.4;">“${escapeHtml(m.texto)}”</p>
+                    <div style="margin-top:0.8rem;"><i class="fas fa-heart" style="color:#D4586A; opacity:0.7; font-size:0.8rem;"></i></div>
                 </div>
             `).join('');
+        }
+
+        // Función de notificación profesional mejorada
+        function mostrarToastProfesional(mensaje, tipo, titulo = '') {
+            const toast = document.createElement('div');
+            toast.className = 'toast-profesional';
+            
+            let icono = '<i class="fas fa-heart"></i>';
+            let tituloToast = '';
+            let color = '#D4586A';
+            
+            if (tipo === 'mensaje') {
+                icono = '<i class="fas fa-feather-alt"></i>';
+                tituloToast = '¡BENDICIÓN ENVIADA!';
+                color = '#D4586A';
+                mensaje = mensaje;
+            } else if (tipo === 'confirmacion') {
+                icono = '<i class="fas fa-check-circle"></i>';
+                tituloToast = '¡ASISTENCIA CONFIRMADA!';
+                color = '#6B8C6B';
+                mensaje = mensaje;
+            } else if (tipo === 'cancelacion') {
+                icono = '<i class="fas fa-heart-broken"></i>';
+                tituloToast = 'RECIBIDO';
+                color = '#E8A35E';
+            } else if (tipo === 'error') {
+                icono = '<i class="fas fa-exclamation-circle"></i>';
+                tituloToast = 'AVISO';
+                color = '#D4586A';
+            } else {
+                tituloToast = titulo || 'NOTIFICACIÓN';
+            }
+            
+            toast.innerHTML = `
+                <div class="toast-content-profesional">
+                    <div class="toast-icon-animado" style="color: ${color};">${icono}</div>
+                    <div class="toast-texto">
+                        <div class="toast-titulo" style="color: ${color};">${tituloToast}</div>
+                        <div class="toast-mensaje">${mensaje}</div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(toast);
+            setTimeout(() => toast.classList.add('toast-visible'), 10);
+            setTimeout(() => {
+                toast.classList.remove('toast-visible');
+                setTimeout(() => toast.remove(), 400);
+            }, 4000);
+        }
+
+        // Animación de carta voladora
+        function animarCartaVoladora() {
+            const carta = document.createElement('div');
+            carta.className = 'carta-voladora';
+            carta.innerHTML = '✉️💌';
+            carta.style.left = '50%';
+            carta.style.bottom = '100px';
+            carta.style.transform = 'translateX(-50%)';
+            document.body.appendChild(carta);
+            setTimeout(() => carta.remove(), 800);
         }
 
         function agregarMensajePublico() {
             let nombre = document.getElementById('mensajePublicoNombre').value.trim();
             let texto = document.getElementById('mensajePublicoTexto').value.trim();
-            
             if (!nombre || !texto) { 
-                mostrarNotificacion('❓ Por favor, escribe tu nombre y tu mensaje');
+                mostrarToastProfesional('Por favor, completa tu nombre y tu mensaje de bendición.', 'error', 'Campos incompletos');
                 return; 
             }
             
-            const btn = event.target;
-            const textoOriginal = btn.innerText;
-            btn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Enviando...';
+            const btn = document.getElementById('btnEnviarMensaje');
+            const textoOriginal = btn.innerHTML;
+            btn.innerHTML = '<span class="spinner"></span> Enviando...';
             btn.disabled = true;
             
             let mensajes = JSON.parse(localStorage.getItem('mensajesPublicos')) || [];
-            mensajes.unshift({ 
-                nombre: nombre, 
-                fecha: new Date().toLocaleDateString('es-ES'), 
-                texto: texto 
-            });
+            mensajes.unshift({ nombre: nombre, fecha: new Date().toLocaleDateString('es-ES'), texto: texto });
             if (mensajes.length > 50) mensajes = mensajes.slice(0, 50);
             localStorage.setItem('mensajesPublicos', JSON.stringify(mensajes));
-            
             document.getElementById('mensajePublicoTexto').value = '';
             cargarMensajesPublicos();
             
-            fetch(APPS_SCRIPT_URL, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ action: 'mensajePublico', nombre: nombre, mensaje: texto })
-            }).catch(error => console.log('Error de red:', error));
+            // Animación de carta voladora
+            animarCartaVoladora();
             
-            mostrarModalConScroll(
-                '💌 Mensaje enviado',
-                `${nombre}, gracias por tu hermosa bendición. 💝\n\n"${texto}"\n\nLos novios atesoran tus palabras. ✨`,
-                false
-            );
+            // Efecto de brillo en el primer mensaje agregado
+            setTimeout(() => {
+                const primerMensaje = document.querySelector('.mensaje-profesional-card');
+                if (primerMensaje) {
+                    primerMensaje.classList.add('mensaje-agregado');
+                    setTimeout(() => primerMensaje.classList.remove('mensaje-agregado'), 600);
+                }
+            }, 100);
+            
+            fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'mensajePublico', nombre: nombre, mensaje: texto }) }).catch(e => console.log('Error de red:', e));
+            
+            mostrarToastProfesional(`${nombre}, tu bendición ha sido recibida. ✨ Los novios la atesoran.`, 'mensaje');
             
             btn.innerHTML = textoOriginal;
             btn.disabled = false;
         }
 
-        function mostrarModalConScroll(titulo, mensaje, regresarAVideo = false) {
-            const modal = document.getElementById('modalAgradecimiento');
-            const modalTitulo = document.getElementById('modalTitulo');
-            const modalMensaje = document.getElementById('modalMensaje');
-            const modalIcon = document.querySelector('#modalAgradecimiento .modal-content i');
-            
-            modalTitulo.innerText = titulo;
-            modalMensaje.innerText = mensaje;
-            modalIcon.className = 'fas fa-heart';
-            modalIcon.style.color = '#D4586A';
-            
-            modal.classList.add('visible');
-            
-            window.volverAVideoAlCerrar = regresarAVideo;
-        }
-
         let animacionEnProgreso = false;
-        
         function abrirSobre() {
             if (animacionEnProgreso) return;
             animacionEnProgreso = true;
-            
             const sobre = document.getElementById('sobre');
             const container = document.getElementById('sobreContainer');
             const contenido = document.getElementById('invitacionContenido');
-            
             sobre.style.transform = 'scale(0.98)';
-            setTimeout(() => {
-                if (sobre) sobre.style.transform = '';
-            }, 150);
-            
+            setTimeout(() => { if (sobre) sobre.style.transform = ''; }, 150);
             sobre.classList.add('abrir');
-            
             setTimeout(() => {
                 container.classList.add('abierto');
-                setTimeout(() => {
-                    contenido.classList.add('visible');
-                    if (typeof AOS !== 'undefined') {
-                        setTimeout(() => AOS.refresh(), 100);
-                    }
-                    setTimeout(() => {
-                        animacionEnProgreso = false;
-                    }, 500);
-                }, 150);
+                setTimeout(() => { contenido.classList.add('visible'); if (typeof AOS !== 'undefined') setTimeout(() => AOS.refresh(), 100); setTimeout(() => { animacionEnProgreso = false; }, 500); }, 150);
             }, 500);
         }
 
-        function copiarTexto(texto) {
-            navigator.clipboard.writeText(texto);
-            const tooltip = document.getElementById('tooltipCopiar');
-            tooltip.style.opacity = '1';
-            setTimeout(() => tooltip.style.opacity = '0', 1500);
-        }
+        function copiarTexto(texto) { navigator.clipboard.writeText(texto); const tooltip = document.getElementById('tooltipCopiar'); tooltip.style.opacity = '1'; setTimeout(() => tooltip.style.opacity = '0', 1500); }
 
         function verificarConfirmacionPrevia() {
             const confirmaciones = JSON.parse(localStorage.getItem('confirmacionesBoda')) || {};
@@ -1518,108 +1581,55 @@
             }
         }
 
-        function crearConfeti() {
-            for (let i = 0; i < 50; i++) {
+        function crearConfetiPremium() {
+            for (let i = 0; i < 80; i++) {
                 setTimeout(() => {
                     const confeti = document.createElement('div');
                     confeti.className = 'confeti';
                     confeti.style.left = Math.random() * 100 + '%';
-                    confeti.style.width = (Math.random() * 8 + 4) + 'px';
-                    confeti.style.height = (Math.random() * 12 + 6) + 'px';
-                    confeti.style.animationDuration = (Math.random() * 2 + 2) + 's';
-                    confeti.style.background = `linear-gradient(135deg, ${['#D4586A', '#E8A35E', '#B87B9E', '#F5E0E8'][Math.floor(Math.random() * 4)]}, ${['#E8A35E', '#D4586A', '#F5E0E8', '#B87B9E'][Math.floor(Math.random() * 4)]})`;
+                    confeti.style.width = (Math.random() * 10 + 5) + 'px';
+                    confeti.style.height = (Math.random() * 14 + 8) + 'px';
+                    confeti.style.animationDuration = (Math.random() * 2.5 + 2) + 's';
+                    confeti.style.background = `linear-gradient(135deg, ${['#D4586A', '#E8A35E', '#B87B9E', '#F5E0E8', '#6B8C6B'][Math.floor(Math.random() * 5)]}, ${['#E8A35E', '#D4586A', '#F5E0E8', '#B87B9E', '#D4586A'][Math.floor(Math.random() * 5)]})`;
+                    confeti.style.borderRadius = ['0%', '50%', '0%', '50%'][Math.floor(Math.random() * 4)];
                     document.body.appendChild(confeti);
                     setTimeout(() => confeti.remove(), 3000);
-                }, i * 30);
+                }, i * 25);
             }
-        }
-
-        function mostrarNotificacion(mensaje) {
-            const notificacion = document.createElement('div');
-            notificacion.className = 'notificacion-flotante';
-            notificacion.innerHTML = `<i class="fas fa-info-circle"></i> ${mensaje}`;
-            document.body.appendChild(notificacion);
-            setTimeout(() => notificacion.remove(), 3000);
         }
 
         async function enviarConfirmacion() {
             const asistencia = document.getElementById('asistencia').value;
             let nombre = document.getElementById('confirmacionNombre').value.trim();
+            if (!asistencia) { mostrarToastProfesional('Por favor, selecciona si vas a asistir.', 'error', 'Opción requerida'); return; }
+            if (!nombre) { mostrarToastProfesional('Por favor, escribe tu nombre completo.', 'error', 'Nombre requerido'); return; }
             
-            if (!asistencia) { 
-                mostrarNotificacion('❓ Por favor, selecciona si vas a asistir');
-                return; 
-            }
-            
-            if (!nombre) { 
-                mostrarNotificacion('❓ Por favor, escribe tu nombre completo');
-                return; 
-            }
-            
-            const btn = event.target;
+            const btn = document.getElementById('btnConfirmarAsistencia');
             const originalText = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Procesando...';
+            btn.innerHTML = '<span class="spinner"></span> Procesando...';
             btn.disabled = true;
-
+            
             let confirmaciones = JSON.parse(localStorage.getItem('confirmacionesBoda')) || {};
-            confirmaciones[nombre] = { 
-                nombre: nombre, 
-                asistencia: asistencia, 
-                fecha: new Date().toLocaleString() 
-            };
+            confirmaciones[nombre] = { nombre: nombre, asistencia: asistencia, fecha: new Date().toLocaleString() };
             localStorage.setItem('confirmacionesBoda', JSON.stringify(confirmaciones));
-
-            fetch(APPS_SCRIPT_URL, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ action: 'confirmar', nombre: nombre, asistencia: asistencia === 'si' ? 'Sí' : 'No' })
-            }).catch(e => console.warn("Error de red:", e));
-
+            
+            fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'confirmar', nombre: nombre, asistencia: asistencia === 'si' ? 'Sí' : 'No' }) }).catch(e => console.warn("Error:", e));
+            
             btn.innerHTML = originalText;
             btn.disabled = false;
             
-            if (asistencia === 'si') {
-                crearConfeti();
-                mostrarModalConScroll(
-                    '🎉 ¡Gracias por confirmar!',
-                    `${nombre}, gracias por confirmar tu asistencia. 💝\n\nTe esperamos en Guanajuato para celebrar juntos este día tan especial. ✨`,
-                    true
-                );
-            } else {
-                mostrarModalConScroll(
-                    '💔 Gracias por avisarnos',
-                    `${nombre}, lamentamos que no puedas venir. Te extrañaremos y esperamos verte pronto. ✨`,
-                    true
-                );
+            if (asistencia === 'si') { 
+                crearConfetiPremium(); 
+                mostrarToastProfesional(`${nombre}, ¡gracias por confirmar! 🎊 Te esperamos en Guanajuato para celebrar este día inolvidable.`, 'confirmacion'); 
+            } else { 
+                mostrarToastProfesional(`${nombre}, gracias por avisarnos. 💝 Te extrañaremos y esperamos verte muy pronto.`, 'cancelacion'); 
             }
             
             document.getElementById('mensajeConfirmacionPrevia').style.display = 'block';
             document.getElementById('formularioConfirmacion').style.display = 'none';
         }
 
-        function cerrarModalYVolverAlInicio() {
-            const modal = document.getElementById('modalAgradecimiento');
-            modal.classList.remove('visible');
-            
-            if (window.volverAVideoAlCerrar) {
-                const videoSection = document.querySelector('.hero-section');
-                if (videoSection) {
-                    videoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-                window.volverAVideoAlCerrar = false;
-            }
-        }
-
-        function escapeHtml(str) {
-            if (!str) return '';
-            return str
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;')
-                .replace(/'/g, '&#39;');
-        }
+        function escapeHtml(str) { if (!str) return ''; return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); }
     </script>
 </body>
 </html>
