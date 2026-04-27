@@ -66,9 +66,6 @@
             mix-blend-mode: multiply;
         }
 
-        /* ============================================ */
-        /* TEXTO DE FONDO - MÁS VISIBLE                 */
-        /* ============================================ */
         .texto-fondo {
             position: fixed;
             top: 0;
@@ -175,19 +172,16 @@
             text-shadow: 0 8px 15px rgba(0,0,0,0.15);
         }
 
-        /* ============================================ */
-        /* SOBRE - CONSISTENTE CON DISEÑO DE BODA       */
-        /* ============================================ */
-        
+        /* SOBRE */
         .sobre-container {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100vh;
-            background: linear-gradient(135deg, #FDF5F0 0%, #FCE4EC 40%, #FFF0E0 100%);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
+            background: rgba(253, 245, 240, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -381,28 +375,6 @@
             transform: translateX(5px);
         }
         
-        .sobre-container::before {
-            content: "🌸";
-            position: absolute;
-            top: 15%;
-            left: 10%;
-            font-size: 2rem;
-            opacity: 0.3;
-            animation: flotarFlor 8s ease-in-out infinite;
-            pointer-events: none;
-        }
-        
-        .sobre-container::after {
-            content: "🌺";
-            position: absolute;
-            bottom: 20%;
-            right: 12%;
-            font-size: 2rem;
-            opacity: 0.3;
-            animation: flotarFlor 8s ease-in-out infinite 2s;
-            pointer-events: none;
-        }
-        
         @keyframes flotarFlor {
             0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.2; }
             50% { transform: translateY(-15px) rotate(10deg); opacity: 0.4; }
@@ -426,8 +398,7 @@
         }
         
         @media (prefers-reduced-motion: reduce) {
-            .sobre, .sello-floral, .sobre-container::before,
-            .sobre-container::after, .texto-abrir {
+            .sobre, .sello-floral, .texto-abrir {
                 animation: none !important;
             }
             .sobre:hover { transform: none !important; }
@@ -442,25 +413,19 @@
             .sello-floral { width: 50px; height: 50px; font-size: 1.3rem; top: 15px; right: 15px; }
             .direccion { bottom: 25px; left: 20px; padding: 6px 16px; }
             .texto-abrir { bottom: -55px; padding: 6px 18px; font-size: 0.7rem; letter-spacing: 3px; }
-            .sobre-container::before { font-size: 1.2rem; top: 10%; left: 5%; }
-            .sobre-container::after { font-size: 1.2rem; bottom: 15%; right: 5%; }
         }
 
-        /* ============================================ */
-        /* GLASSMORPHISM EFFECT - ESTILOS DE VIDRIO     */
-        /* ============================================ */
-        
         .invitacion-container {
             max-width: 1200px;
             margin: 0 auto;
-            background: rgba(255, 245, 240, 0.2) !important;
-            backdrop-filter: blur(16px) saturate(180%) !important;
-            -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+            background: rgba(255, 245, 240, 0.2);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             position: relative;
             overflow: hidden;
             border-radius: 50px 20px 50px 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 0 0 12px rgba(212,88,106,0.08), inset 0 1px 0 rgba(255,255,255,0.5) !important;
-            border: 1px solid rgba(255, 255, 255, 0.5) !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 0 0 12px rgba(212,88,106,0.08), inset 0 1px 0 rgba(255,255,255,0.5);
+            border: 1px solid rgba(255, 255, 255, 0.5);
         }
 
         .hero-section { 
@@ -481,9 +446,9 @@
         .welcome-section {
             padding: 4rem 2rem;
             text-align: center;
-            background: rgba(255, 245, 240, 0.25) !important;
-            backdrop-filter: blur(12px) !important;
-            -webkit-backdrop-filter: blur(12px) !important;
+            background: rgba(255, 245, 240, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(212,88,106,0.2);
             border-radius: 0;
         }
@@ -528,12 +493,12 @@
         }
         
         .counter-item {
-            background: rgba(212, 88, 106, 0.25) !important;
+            background: rgba(212, 88, 106, 0.25);
             padding: 1rem 1.8rem;
             border-radius: 50px;
-            border: 1px solid rgba(255,255,255,0.5) !important;
-            backdrop-filter: blur(8px) !important;
-            -webkit-backdrop-filter: blur(8px) !important;
+            border: 1px solid rgba(255,255,255,0.5);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             min-width: 100px;
         }
         
@@ -581,9 +546,9 @@
         .cita-card {
             max-width: 800px;
             margin: 0 auto;
-            background: rgba(255, 245, 240, 0.3) !important;
-            backdrop-filter: blur(12px) !important;
-            -webkit-backdrop-filter: blur(12px) !important;
+            background: rgba(255, 245, 240, 0.3);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             padding: 2rem;
             border-radius: 30px;
             text-align: center;
@@ -602,9 +567,9 @@
             flex-wrap: wrap;
             align-items: center;
             gap: 2rem;
-            background: rgba(255, 245, 240, 0.25) !important;
-            backdrop-filter: blur(12px) !important;
-            -webkit-backdrop-filter: blur(12px) !important;
+            background: rgba(255, 245, 240, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border-radius: 30px;
             overflow: hidden;
             box-shadow: var(--sombra-relieve);
@@ -632,9 +597,9 @@
         }
         
         .hotel-card {
-            background: rgba(255, 245, 240, 0.3) !important;
-            backdrop-filter: blur(10px) !important;
-            -webkit-backdrop-filter: blur(10px) !important;
+            background: rgba(255, 245, 240, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 1rem;
             text-align: center;
@@ -644,8 +609,8 @@
         }
         
         .hotel-card:hover { transform: translateY(-5px); }
-        .hotel-card h4 { color: var(--fucsia); margin-bottom: 0.5rem; }
-        .hotel-card p { font-size: 0.8rem; margin-bottom: 0.5rem; }
+        .hotel-card h4 { color: var(--fucsia); margin-bottom: 0.5rem; font-family: 'Montserrat', sans-serif; }
+        .hotel-card p { font-size: 0.8rem; margin-bottom: 0.5rem; font-family: 'Montserrat', sans-serif; }
         
         .mapa-link { 
             display: inline-block; 
@@ -654,6 +619,7 @@
             text-decoration: none; 
             font-weight: 600; 
             font-size: 0.85rem; 
+            font-family: 'Montserrat', sans-serif;
         }
 
         .galeria-grid {
@@ -664,9 +630,9 @@
         }
         
         .galeria-item {
-            background: rgba(255, 245, 240, 0.25) !important;
-            backdrop-filter: blur(10px) !important;
-            -webkit-backdrop-filter: blur(10px) !important;
+            background: rgba(255, 245, 240, 0.25);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border-radius: 20px;
             overflow: hidden;
             box-shadow: var(--sombra-relieve);
@@ -685,9 +651,9 @@
         }
         
         .regalo-card {
-            background: rgba(255, 245, 240, 0.3) !important;
-            backdrop-filter: blur(12px) !important;
-            -webkit-backdrop-filter: blur(12px) !important;
+            background: rgba(255, 245, 240, 0.3);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border-radius: 30px;
             padding: 2rem;
             text-align: center;
@@ -702,10 +668,11 @@
         
         .regalo-card:hover { transform: translateY(-5px); }
         .regalo-card i { font-size: 2rem; color: var(--fucsia); margin-bottom: 1rem; }
+        .regalo-card h3 { font-family: 'Playfair Display', serif; margin-bottom: 0.5rem; }
         
         .btn-copiar, .btn-link {
             display: inline-block;
-            background: linear-gradient(135deg, rgba(212,88,106,0.85), rgba(232,163,94,0.85)) !important;
+            background: linear-gradient(135deg, rgba(212,88,106,0.85), rgba(232,163,94,0.85));
             backdrop-filter: blur(4px);
             color: white;
             border: 1px solid rgba(255,255,255,0.5);
@@ -715,14 +682,15 @@
             text-decoration: none;
             margin-top: 1rem;
             transition: var(--transition-suave);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
         }
         
         .btn-copiar:hover, .btn-link:hover { 
             transform: translateY(-2px);
-            background: linear-gradient(135deg, var(--fucsia), var(--naranja)) !important;
+            background: linear-gradient(135deg, var(--fucsia), var(--naranja));
         }
 
-        /* Sección de mensajes públicos para invitados */
         .mensajes-publicos-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -731,9 +699,9 @@
         }
         
         .mensaje-publico-card {
-            background: rgba(255, 245, 240, 0.35) !important;
-            backdrop-filter: blur(10px) !important;
-            -webkit-backdrop-filter: blur(10px) !important;
+            background: rgba(255, 245, 240, 0.35);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             padding: 1.5rem;
             border-radius: 24px;
             box-shadow: var(--sombra-relieve);
@@ -748,11 +716,13 @@
         .mensaje-publico-card strong {
             color: var(--fucsia);
             font-size: 1.1rem;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .mensaje-publico-card small {
             color: var(--naranja);
             font-size: 0.7rem;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .mensaje-publico-card p {
@@ -766,9 +736,9 @@
         .nuevo-mensaje-publico {
             max-width: 550px;
             margin: 2rem auto;
-            background: rgba(255, 245, 240, 0.3) !important;
-            backdrop-filter: blur(12px) !important;
-            -webkit-backdrop-filter: blur(12px) !important;
+            background: rgba(255, 245, 240, 0.3);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             padding: 2rem;
             border-radius: 30px;
             border: 1px solid rgba(255,255,255,0.4);
@@ -790,139 +760,12 @@
             box-shadow: 0 0 0 2px rgba(212,88,106,0.2);
         }
 
-        /* Sección privada para novios (requiere contraseña) */
-        .seccion-privada {
-            position: relative;
-        }
-        
-        .mensajes-privados-container {
-            display: none;
-        }
-        
-        .mensajes-privados-container.visible {
-            display: block;
-        }
-        
-        .password-prompt {
-            text-align: center;
-            padding: 2rem;
-            background: rgba(255, 245, 240, 0.3);
-            backdrop-filter: blur(12px);
-            border-radius: 30px;
-            border: 1px solid rgba(255,255,255,0.4);
-            max-width: 400px;
-            margin: 1rem auto;
-        }
-        
-        .password-prompt input {
-            width: 100%;
-            padding: 0.8rem;
-            margin: 1rem 0;
-            border: 1px solid rgba(212,88,106,0.3);
-            border-radius: 30px;
-            background: rgba(255,255,255,0.8);
-            text-align: center;
-        }
-        
-        .password-prompt .error {
-            color: #D4586A;
-            font-size: 0.8rem;
-            margin-top: 0.5rem;
-            display: none;
-        }
-        
-        .comentarios-grid-privados {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .comentario-card-privado {
-            background: rgba(255, 245, 240, 0.35) !important;
-            backdrop-filter: blur(10px) !important;
-            -webkit-backdrop-filter: blur(10px) !important;
-            padding: 1.5rem;
-            border-radius: 20px;
-            box-shadow: var(--sombra-relieve);
-            border: 1px solid rgba(255,255,255,0.5);
-            position: relative;
-        }
-        
-        .comentario-card-privado .edit-btn, 
-        .comentario-card-privado .delete-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(212,88,106,0.2);
-            border: none;
-            border-radius: 50%;
-            width: 28px;
-            height: 28px;
-            cursor: pointer;
-            color: var(--fucsia);
-            transition: all 0.2s ease;
-        }
-        
-        .comentario-card-privado .delete-btn {
-            right: 45px;
-        }
-        
-        .comentario-card-privado .edit-btn:hover,
-        .comentario-card-privado .delete-btn:hover {
-            background: rgba(212,88,106,0.4);
-            transform: scale(1.05);
-        }
-        
-        .modal-editar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.7);
-            backdrop-filter: blur(8px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 4000;
-            opacity: 0;
-            pointer-events: none;
-            transition: 0.3s;
-        }
-        
-        .modal-editar.visible {
-            opacity: 1;
-            pointer-events: all;
-        }
-        
-        .modal-editar-content {
-            background: rgba(255, 245, 240, 0.95);
-            backdrop-filter: blur(12px);
-            padding: 2rem;
-            border-radius: 30px;
-            text-align: center;
-            max-width: 500px;
-            width: 90%;
-            border: 1px solid rgba(255,255,255,0.5);
-        }
-        
-        .modal-editar-content textarea {
-            width: 100%;
-            padding: 0.8rem;
-            margin: 1rem 0;
-            border: 1px solid rgba(212,88,106,0.3);
-            border-radius: 20px;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1rem;
-        }
-
         .confirmacion-form {
             max-width: 500px;
             margin: 0 auto;
-            background: rgba(255, 245, 240, 0.3) !important;
-            backdrop-filter: blur(12px) !important;
-            -webkit-backdrop-filter: blur(12px) !important;
+            background: rgba(255, 245, 240, 0.3);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             padding: 2rem;
             border-radius: 30px;
             text-align: center;
@@ -936,86 +779,174 @@
             border: 1px solid rgba(212,88,106,0.3);
             border-radius: 30px;
             background: rgba(255, 255, 255, 0.75);
+            font-family: 'Montserrat', sans-serif;
         }
 
+        /* MODAL DE AGRADECIMIENTO - vidrioso y profesional */
         .modal-agradecimiento {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(212,88,106,0.85);
+            background: rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(12px);
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 3000;
+            z-index: 99999;
             opacity: 0;
-            pointer-events: none;
-            transition: 0.3s;
+            visibility: hidden;
+            transition: all 0.4s ease;
         }
-        
-        .modal-agradecimiento.visible { opacity: 1; pointer-events: all; }
-        
+
+        .modal-agradecimiento.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
         .modal-content {
-            background: rgba(255, 245, 240, 0.9);
-            backdrop-filter: blur(8px);
-            padding: 2rem;
-            border-radius: 30px;
+            background: rgba(255, 245, 240, 0.95);
+            backdrop-filter: blur(24px);
+            padding: 2.5rem;
+            border-radius: 48px;
             text-align: center;
-            max-width: 400px;
-            border: 1px solid rgba(255,255,255,0.5);
+            max-width: 420px;
+            width: 90%;
+            border: 1px solid rgba(255,255,255,0.7);
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255,255,255,0.8);
+            transform: scale(0.9);
+            transition: transform 0.4s cubic-bezier(0.34, 1.2, 0.64, 1);
+        }
+
+        .modal-agradecimiento.visible .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-content i {
+            font-size: 4rem;
+            color: #D4586A;
+            margin-bottom: 1rem;
+            animation: latidoModal 0.6s ease-in-out;
+        }
+
+        @keyframes latidoModal {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .modal-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #4A3F35;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: #6B5B50;
+            margin-bottom: 1.8rem;
+            white-space: pre-line;
+            line-height: 1.5;
+        }
+
+        .modal-content .btn-cerrar {
+            background: linear-gradient(135deg, #D4586A, #E8A35E);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .modal-content .btn-cerrar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(212, 88, 106, 0.4);
+        }
+
+        .notificacion-flotante {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #D4586A;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            z-index: 10001;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            animation: subirNotificacion 0.3s ease;
+        }
+
+        @keyframes subirNotificacion {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        .confeti {
+            position: fixed;
+            width: 10px;
+            height: 15px;
+            z-index: 99999;
+            pointer-events: none;
+            animation: caerConfeti 3s linear forwards;
+            border-radius: 2px;
+        }
+
+        @keyframes caerConfeti {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
         }
 
         .footer-floral {
-            background: linear-gradient(135deg, rgba(212,88,106,0.85), rgba(232,163,94,0.85)) !important;
+            background: linear-gradient(135deg, rgba(212,88,106,0.85), rgba(232,163,94,0.85));
             backdrop-filter: blur(8px);
             color: white;
             text-align: center;
             padding: 2rem;
             border-top: 1px solid rgba(255,255,255,0.3);
-        }
-        
-        .telefono-box {
-            background: linear-gradient(135deg, rgba(212,88,106,0.85), rgba(232,163,94,0.85)) !important;
-            backdrop-filter: blur(8px);
-            color: white;
-            padding: 1rem;
-            border-radius: 60px;
-            text-align: center;
-            margin-top: 2rem;
-            border: 1px solid rgba(255,255,255,0.4);
-        }
-
-        .mensaje-opcional {
-            text-align: center;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2rem;
-            color: var(--fucsia);
-            margin: 1.5rem auto 0;
-            font-style: italic;
-            background: rgba(255, 245, 240, 0.4);
-            backdrop-filter: blur(4px);
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            border: 1px solid rgba(255,255,255,0.4);
+            font-family: 'Montserrat', sans-serif;
         }
 
         .btn-audio {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            width: auto;
-            background: rgba(212,88,106,0.9);
-            backdrop-filter: blur(8px);
-            border-radius: 50px;
-            padding: 12px 20px;
-            border: 1px solid rgba(255,255,255,0.5);
+            position: fixed !important;
+            bottom: 20px !important;
+            right: 20px !important;
+            z-index: 9999 !important;
+            width: auto !important;
+            background: rgba(212,88,106,0.9) !important;
+            backdrop-filter: blur(8px) !important;
+            border-radius: 50px !important;
+            padding: 12px 20px !important;
+            border: 1px solid rgba(255,255,255,0.5) !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
         }
 
-        img { box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+        .btn-audio:hover {
+            transform: scale(1.05) !important;
+            background: rgba(232,163,94,0.9) !important;
+        }
 
         @media (max-width: 768px) {
             .welcome-names { font-size: 2rem; }
@@ -1025,18 +956,24 @@
             .hoteles-grid { grid-template-columns: 1fr; }
             .galeria-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
             .galeria-item img { height: 180px; }
-            .sobre { width: 320px; height: 260px; }
-            .solapa { border-left: 160px solid transparent; border-right: 160px solid transparent; border-top: 130px solid #D4586A; }
-            .cuerpo-sobre { height: 240px; }
-            .direccion .nombre { font-size: 1.5rem; }
-            .sello-floral { width: 50px; height: 50px; font-size: 1.4rem; top: 15px; right: 15px; }
-            .direccion { bottom: 25px; left: 20px; }
+            .modal-content {
+                padding: 1.8rem;
+                max-width: 320px;
+            }
+            .modal-content i {
+                font-size: 3rem;
+            }
+            .modal-content h2 {
+                font-size: 1.3rem;
+            }
+            .modal-content p {
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="fondo-acuarela">
-        <!-- TEXTO DE FONDO PROFESIONAL -->
         <div class="texto-fondo">
             <div class="texto-fondo-contenido">
                 Nuestra Boda <span>✧</span> Jorge & Julissa
@@ -1060,6 +997,12 @@
         </div>
     </div>
 
+    <audio id="audioFondo" loop>
+        <source src="Musica/Cancion.mp3" type="audio/mpeg">
+        <source src="Musica/Cancion.wav" type="audio/wav">
+    </audio>
+    <button id="btnAudio" class="btn-copiar btn-audio" onclick="toggleAudio()"><i class="fas fa-music"></i> Activar música</button>
+
     <div class="invitacion-contenido" id="invitacionContenido">
         <div class="invitacion-container">
             <section class="hero-section">
@@ -1079,7 +1022,6 @@
                 </div>
             </section>
        
-            <!-- FOTO 1 -->
             <section class="seccion" data-aos="fade-up">
                 <div style="border-radius: 30px; overflow: hidden; box-shadow: var(--sombra-relieve); position: relative;">
                     <img src="Fotos/1.jpg" alt="Foto 1" style="width: 100%; height: auto; display: block;">
@@ -1091,7 +1033,6 @@
                 </div>
             </section>
 
-            <!-- FOTO 2 -->
             <section class="seccion" data-aos="fade-up">
                 <div class="cita-card">
                     <i class="fas fa-feather-alt" style="font-size: 1.8rem; color: var(--fucsia); margin-bottom: 1rem; display: block;"></i>
@@ -1103,7 +1044,6 @@
                 </div>
             </section>
 
-            <!-- FOTO 3 -->
             <section class="seccion" data-aos="fade-up">
                 <div class="cita-card" style="margin-bottom: 2rem;">
                     <i class="fas fa-quote-left" style="font-size: 4.8rem; color: var(--fucsia); margin-bottom: 1rem; display: block;"></i>
@@ -1115,35 +1055,32 @@
                 </div>
             </section>
 
-            <!-- CEREMONIA -->
             <section class="seccion" data-aos="fade-up">
                 <h2 class="seccion-titulo">Ceremonia</h2>
                 <div style="max-width: 800px; margin: 0 auto; background: rgba(255,245,240,0.25); backdrop-filter: blur(12px); border-radius: 40px; overflow: hidden; box-shadow: var(--sombra-relieve); border: 1px solid rgba(255,255,255,0.4);">
                     <div><img src="Fotos/Iglesia.jpg" alt="Templo" style="width: 100%; height: auto; display: block;"></div>
                     <div style="padding: 2rem; text-align: center;">
                         <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--fucsia);">Templo del Señor de la Misericordia</h3>
-                        <p><i class="fas fa-calendar-alt" style="color: var(--fucsia);"></i> 19 de septiembre del 2026 · 16:00 hrs</p>
-                        <p><i class="fas fa-map-marker-alt" style="color: var(--fucsia);"></i> Jalpa de Cánovas, Guanajuato</p>
+                        <p style="font-family: 'Montserrat', sans-serif;"><i class="fas fa-calendar-alt" style="color: var(--fucsia);"></i> 19 de septiembre del 2026 · 16:00 hrs</p>
+                        <p style="font-family: 'Montserrat', sans-serif;"><i class="fas fa-map-marker-alt" style="color: var(--fucsia);"></i> Jalpa de Cánovas, Guanajuato</p>
                         <a href="https://www.google.com/maps/search/?api=1&query=Templo+del+Señor+de+la+Misericordia+Jalpa+de+Canovas+Guanajuato" target="_blank" class="btn-copiar" style="margin-top: 1rem;">Ver ubicación</a>
                     </div>
                 </div>
             </section>
 
-            <!-- RECEPCIÓN -->
             <section class="seccion" data-aos="fade-up">
                 <h2 class="seccion-titulo">Recepción</h2>
                 <div style="max-width: 800px; margin: 0 auto; background: rgba(255,245,240,0.25); backdrop-filter: blur(12px); border-radius: 40px; overflow: hidden; box-shadow: var(--sombra-relieve); border: 1px solid rgba(255,255,255,0.4);">
                     <div><img src="Fotos/Restaurante.jpg" alt="Pérgola" style="width: 100%; height: auto; display: block;"></div>
                     <div style="padding: 2rem; text-align: center;">
                         <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--fucsia);">Pérgola Restaurante</h3>
-                        <p><i class="fas fa-clock" style="color: var(--fucsia);"></i> 17:30 horas · Banquete de tres tiempos</p>
-                        <p><i class="fas fa-map-marker-alt" style="color: var(--fucsia);"></i> Jalpa de Cánovas, Guanajuato</p>
+                        <p style="font-family: 'Montserrat', sans-serif;"><i class="fas fa-clock" style="color: var(--fucsia);"></i> 17:30 horas · Banquete de tres tiempos</p>
+                        <p style="font-family: 'Montserrat', sans-serif;"><i class="fas fa-map-marker-alt" style="color: var(--fucsia);"></i> Jalpa de Cánovas, Guanajuato</p>
                         <a href="https://www.google.com/maps/search/?api=1&query=Pergola+Restaurante+Jalpa+de+Canovas+Guanajuato" target="_blank" class="btn-copiar" style="margin-top: 1rem;">Ver ubicación</a>
                     </div>
                 </div>
             </section>
 
-            <!-- HOSPEDAJE -->
             <section class="seccion" data-aos="fade-up">
                 <h2 class="seccion-titulo">Hospedaje <span>Recomendado</span></h2>
                 <div class="hoteles-grid">
@@ -1152,13 +1089,13 @@
                     <div class="hotel-card"><h4>Hotel Quinta Jalpa</h4><p>📍 Jalpa de Cánovas</p><a href="https://maps.google.com/?cid=14263185821617594633" target="_blank" class="mapa-link">Ver mapa</a></div>
                     <div class="hotel-card"><h4>Mesón del Conde</h4><p>📍 Jalpa de Cánovas</p><a href="https://maps.google.com/?cid=9585530931885990778" target="_blank" class="mapa-link">Ver mapa</a></div>
                 </div>
-                <div class="telefono-box">
-                    <i class="fas fa-phone-alt"></i> Reserva al: <strong>476 107 7582</strong><br>
-                    <small>Indica que es la boda de Julissa y Jorge</small>
+                <div class="telefono-box" style="background: linear-gradient(135deg, rgba(212,88,106,0.9), rgba(232,163,94,0.9)); backdrop-filter: blur(8px); color: white; padding: 1.5rem; border-radius: 60px; text-align: center; margin-top: 2rem; border: 1px solid rgba(255,255,255,0.4); box-shadow: var(--sombra-relieve);">
+                    <i class="fas fa-phone-alt" style="font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                    <p style="font-family: 'Montserrat', sans-serif; margin-bottom: 0.5rem;">📞 Reserva al: <strong>476 107 7582</strong></p>
+                    <p style="font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; font-style: italic;">✨ Indica que es la boda de Julissa y Jorge ✨</p>
                 </div>
             </section>
 
-            <!-- ITINERARIO + DRESS CODE -->
             <section class="seccion" data-aos="fade-up">
                 <h2 class="seccion-titulo">Itinerario</h2>
                 <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
@@ -1166,25 +1103,24 @@
                         <img src="Fotos/Intinerario.jpeg" alt="Itinerario" style="width: 100%; height: auto;">
                         <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); padding: 2rem;">
                             <p style="color: white; font-family: 'Playfair Display'; font-size: 1.1rem;">¡LOS DETALLES DEL GRAN DÍA!</p>
-                            <div style="color: white; margin-top: 1rem;"><strong>16:00 hrs</strong> Ceremonia</div>
-                            <div style="color: white;"><strong>17:30 hrs</strong> Recepción</div>
-                            <div style="color: white;"><strong>18:00 hrs</strong> Comida</div>
-                            <div style="color: white;"><strong>20:00 hrs</strong> Fiesta</div>
+                            <div style="color: white; margin-top: 1rem; font-family: 'Montserrat', sans-serif;"><strong>16:00 hrs</strong> Ceremonia</div>
+                            <div style="color: white; font-family: 'Montserrat', sans-serif;"><strong>17:30 hrs</strong> Recepción</div>
+                            <div style="color: white; font-family: 'Montserrat', sans-serif;"><strong>18:00 hrs</strong> Comida</div>
+                            <div style="color: white; font-family: 'Montserrat', sans-serif;"><strong>20:00 hrs</strong> Fiesta</div>
                         </div>
                     </div>
                     <div style="flex: 1; position: relative; border-radius: 30px; overflow: hidden; box-shadow: var(--sombra-relieve);">
                         <img src="Fotos/Vestimenta.jpg" alt="Vestimenta" style="width: 100%; height: auto;">
                         <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); padding: 2rem; text-align: center;">
                             <p style="color: white; font-family: 'Playfair Display'; font-size: 1.3rem;">DRESS CODE</p>
-                            <p style="color: white;">- Elegante -</p>
-                            <p style="color: white;">¡La fiesta se viste de color y alegría!</p>
-                            <p style="color: white;">💐 Deja el blanco para la novia</p>
+                            <p style="color: white; font-family: 'Montserrat', sans-serif;">- Elegante -</p>
+                            <p style="color: white; font-family: 'Montserrat', sans-serif;">¡La fiesta se viste de color y alegría!</p>
+                            <p style="color: white; font-family: 'Montserrat', sans-serif;">💐 Deja el blanco para la novia</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- HISTORIA -->
             <section class="seccion" data-aos="fade-up">
                 <h2 class="seccion-titulo">Nuestra <span>Historia</span></h2>
                 <div class="historia-card">
@@ -1197,24 +1133,25 @@
                 </div>
             </section>
 
-            <!-- GALERÍA -->
             <section class="seccion" data-aos="fade-up">
                 <h2 class="seccion-titulo">Fotos de la <span>Sesión</span></h2>
                 <div class="galeria-grid" id="galeriaFotos"></div>
             </section>
 
-            <!-- FOTO 17 -->
             <section class="seccion" data-aos="fade-up">
                 <div style="border-radius: 30px; overflow: hidden; box-shadow: var(--sombra-relieve);">
                     <img src="Fotos/17.jpg" alt="Foto 17" style="width: 100%; height: auto;">
                 </div>
             </section>
 
-            <!-- REGALOS -->
             <section class="seccion" data-aos="fade-up">
                 <h2 class="seccion-titulo">Mesa de <span>Regalos</span></h2>
                 <div style="text-align: center;">
-                    <div class="mensaje-opcional"><i class="fas fa-heart"></i> El regalo es opcional, lo más importante para nosotros es tu compañía</div>
+                    <div class="mensaje-opcional" style="background: rgba(255,245,240,0.8); backdrop-filter: blur(8px); border-radius: 50px; padding: 1rem 2rem; display: inline-block; margin: 1rem auto; text-align: center; border: 1px solid rgba(212,88,106,0.3); box-shadow: var(--sombra-suave);">
+                        <i class="fas fa-heart" style="color: #D4586A; margin-right: 0.5rem;"></i>
+                        <span style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;">El regalo es opcional, lo más importante para nosotros es tu compañía</span>
+                        <i class="fas fa-smile-wink" style="color: #E8A35E; margin-left: 0.5rem;"></i>
+                    </div>
                 </div>
                 <div class="regalos-grid" style="margin-top: 2rem;">
                     <div class="regalo-card"><i class="fas fa-plane"></i><h3>Luna de Miel</h3><p><strong>CLABE:</strong> 012180015158265483</p><button class="btn-copiar" onclick="copiarTexto('012180015158265483')">Copiar CLABE</button></div>
@@ -1222,7 +1159,6 @@
                 </div>
             </section>
 
-            <!-- SECCIÓN DE MENSAJES PÚBLICOS (Invitados pueden dejar mensajes) -->
             <section class="seccion" data-aos="fade-up">
                 <h2 class="seccion-titulo">Deja tu <span>Mensaje</span> de Bendición</h2>
                 <div class="mensajes-publicos-grid" id="mensajesPublicosGrid"></div>
@@ -1233,46 +1169,40 @@
                 </div>
             </section>
 
-
-            <!-- CONFIRMAR ASISTENCIA -->
             <section class="seccion" data-aos="fade-up">
                 <h2 class="seccion-titulo">Confirma <span>tu asistencia</span></h2>
-                <div class="confirmacion-form">
-                    <div id="mensajeConfirmacionPrevia" style="display:none; background:rgba(232,245,233,0.9); padding:1rem; border-radius:30px; margin-bottom:1rem;">✅ Ya confirmaste. ¡Gracias!</div>
+                <div class="confirmacion-form" style="max-width: 500px; margin: 0 auto; padding: 2rem;">
+                    <div id="mensajeConfirmacionPrevia" style="display:none; margin-bottom:1rem; background:rgba(232,245,233,0.9); padding:1rem; border-radius:30px;">
+                        ✅ ¡Gracias por confirmar tu asistencia!
+                    </div>
                     <div id="formularioConfirmacion">
-                        <input type="text" id="confirmacionNombre" readonly placeholder="Tu nombre">
-                        <select id="asistencia"><option value="">-- Selecciona --</option><option value="si">Sí, voy a asistir</option><option value="no">No puedo asistir</option></select>
-                        <input type="number" id="acompanantes" placeholder="Acompañantes" min="0" max="5" value="0">
-                        <button class="btn-copiar" onclick="enviarConfirmacion()">Enviar confirmación</button>
+                        <input type="text" id="confirmacionNombre" placeholder="Escribe tu nombre completo" style="width:100%; margin-bottom:1rem; padding:0.8rem; border-radius:30px; border:1px solid rgba(212,88,106,0.3);">
+                        <select id="asistencia" style="width:100%; margin-bottom:1rem; padding:0.8rem; border-radius:30px; border:1px solid rgba(212,88,106,0.3);">
+                            <option value="">-- ¿Vas a asistir? --</option>
+                            <option value="si">✅ Sí, voy a asistir</option>
+                            <option value="no">❌ No puedo asistir</option>
+                        </select>
+                        <button class="btn-copiar" onclick="enviarConfirmacion()" style="width:100%;">Enviar confirmación</button>
                     </div>
                 </div>
             </section>
 
+            <div id="tooltipCopiar" style="position:fixed; bottom:20px; left:50%; background:var(--texto-oscuro); color:white; padding:0.5rem 1rem; border-radius:30px; opacity:0; transition:0.2s; transform:translateX(-50%); z-index:1000;">¡Copiado!</div>
+
+            <div class="modal-agradecimiento" id="modalAgradecimiento">
+                <div class="modal-content">
+                    <i class="fas fa-heart"></i>
+                    <h2 id="modalTitulo"></h2>
+                    <p id="modalMensaje"></p>
+                    <button class="btn-cerrar" onclick="cerrarModalYVolverAlInicio()">
+                        <i class="fas fa-check"></i> Continuar
+                    </button>
+                </div>
+            </div>
+
             <footer class="footer-floral">
                 <p>Julissa & Jorge · 19 Septiembre 2026 · Jalpa de Cánovas, Guanajuato</p>
             </footer>
-        </div>
-    </div>
-
-    <!-- AUDIO -->
-    <audio id="audioFondo" loop>
-        <source src="Musica/Cancion.mp3" type="audio/mpeg">
-        <source src="Musica/Cancion.wav" type="audio/wav">
-    </audio>
-    <button id="btnAudio" class="btn-copiar btn-audio" onclick="toggleAudio()"><i class="fas fa-music"></i> Activar música</button>
-
-    <div id="tooltipCopiar" style="position:fixed; bottom:20px; left:50%; background:var(--texto-oscuro); color:white; padding:0.5rem 1rem; border-radius:30px; opacity:0; transition:0.2s; transform:translateX(-50%); z-index:1000;">¡Copiado!</div>
-
-    <div class="modal-agradecimiento" id="modalAgradecimiento"><div class="modal-content"><i class="fas fa-heart" style="font-size:2rem; color:var(--fucsia);"></i><h2 id="modalTitulo"></h2><p id="modalMensaje"></p><button onclick="cerrarModal()" class="btn-copiar">Cerrar</button></div></div>
-
-    <!-- Modal para editar mensajes privados -->
-    <div class="modal-editar" id="modalEditar">
-        <div class="modal-editar-content">
-            <i class="fas fa-edit" style="font-size: 2rem; color: var(--fucsia); margin-bottom: 1rem;"></i>
-            <h3>Editar mensaje</h3>
-            <textarea id="editarTexto" rows="3"></textarea>
-            <button class="btn-copiar" onclick="guardarEdicion()">Guardar cambios</button>
-            <button class="btn-copiar" onclick="cerrarModalEditar()" style="background: #999; margin-left: 10px;">Cancelar</button>
         </div>
     </div>
 
@@ -1282,11 +1212,8 @@
 
         let nombreInvitado = "", codigoInvitado = "";
         let audioActivo = false;
-        let mensajeEditandoId = null;
-        let isAdminMode = false;
-        const PASSWORD = "julissayjorge2026"; // Cambia esta contraseña
-	const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz6ClB7f6M-rpRHkv4Ur73w2t-xXPtDD-lZ9yQDiCO6FL1Z8986EE6OX11lwsF3_jvuPQ/exec";
-	let googleSheetsActivo = true;
+        const PASSWORD = "julissayjorge2026";
+        const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz6ClB7f6M-rpRHkv4Ur73w2t-xXPtDD-lZ9yQDiCO6FL1Z8986EE6OX11lwsF3_jvuPQ/exec";
 
         const audio = document.getElementById('audioFondo');
         const btnAudio = document.getElementById('btnAudio');
@@ -1300,7 +1227,7 @@
             } else {
                 audio.play().catch(e => {
                     console.log('Error al reproducir audio:', e);
-                    alert('La música no pudo cargarse. Verifica que el archivo existe en la carpeta Musica/ con nombre "Cancion.mp3"');
+                    mostrarNotificacion('⚠️ No se pudo cargar la música');
                 });
                 audioActivo = true;
                 btnAudio.innerHTML = '<i class="fas fa-stop"></i> Detener música';
@@ -1316,7 +1243,6 @@
             if (diferencia > 0) {
                 const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
                 const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                
                 document.getElementById('diasRestantes').innerText = dias;
                 document.getElementById('horasRestantes').innerText = horas;
             } else {
@@ -1338,17 +1264,17 @@
             for (let i = 6; i <= 16; i++) {
                 const div = document.createElement('div');
                 div.className = 'galeria-item';
-                div.innerHTML = `<img src="Fotos/${i}.jpg" alt="Foto ${i}" onerror="this.src='https://placehold.co/400x500/C9A96E/F5F0E8?text=Foto+${i}'">`;
+                div.innerHTML = `<img src="Fotos/${i}.jpg" alt="Foto ${i}" loading="lazy" onerror="this.src='https://placehold.co/400x500/C9A96E/F5F0E8?text=Foto+${i}'">`;
                 galeria.appendChild(div);
             }
             
             cargarMensajesPublicos();
-            cargarMensajesPrivados();
             verificarConfirmacionPrevia();
-            document.getElementById('confirmacionNombre').value = nombreInvitado;
+            if (nombreInvitado && nombreInvitado !== "INVITADO") {
+                document.getElementById('confirmacionNombre').value = nombreInvitado;
+            }
         });
 
-        // ========== MENSAJES PÚBLICOS ==========
         function cargarMensajesPublicos() {
             let mensajes = JSON.parse(localStorage.getItem('mensajesPublicos')) || [];
             const grid = document.getElementById('mensajesPublicosGrid');
@@ -1356,7 +1282,7 @@
                 grid.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--texto-oscuro);">Sé el primero en dejar un mensaje de bendición 💝</div>';
                 return;
             }
-            grid.innerHTML = mensajes.map((m, index) => `
+            grid.innerHTML = mensajes.map((m) => `
                 <div class="mensaje-publico-card">
                     <strong>${escapeHtml(m.nombre)}</strong><br>
                     <small>${m.fecha}</small>
@@ -1365,144 +1291,65 @@
             `).join('');
         }
 
-                function agregarMensajePublico() {
+        function agregarMensajePublico() {
             let nombre = document.getElementById('mensajePublicoNombre').value.trim();
             let texto = document.getElementById('mensajePublicoTexto').value.trim();
             
             if (!nombre || !texto) { 
-                alert('Por favor, escribe tu nombre y tu mensaje'); 
+                mostrarNotificacion('❓ Por favor, escribe tu nombre y tu mensaje');
                 return; 
             }
             
-            // Mostrar loading
             const btn = event.target;
             const textoOriginal = btn.innerText;
-            btn.innerText = 'Enviando...';
+            btn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Enviando...';
             btn.disabled = true;
             
-            // Enviar a Google Sheets
+            let mensajes = JSON.parse(localStorage.getItem('mensajesPublicos')) || [];
+            mensajes.unshift({ 
+                nombre: nombre, 
+                fecha: new Date().toLocaleDateString('es-ES'), 
+                texto: texto 
+            });
+            if (mensajes.length > 50) mensajes = mensajes.slice(0, 50);
+            localStorage.setItem('mensajesPublicos', JSON.stringify(mensajes));
+            
+            document.getElementById('mensajePublicoTexto').value = '';
+            cargarMensajesPublicos();
+            
             fetch(APPS_SCRIPT_URL, {
                 method: 'POST',
                 mode: 'no-cors',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    action: 'mensajePublico',
-                    nombre: nombre,
-                    mensaje: texto
-                })
-            }).then(() => {
-                // También guardar localmente para mostrar inmediatamente
-                let mensajes = JSON.parse(localStorage.getItem('mensajesPublicos')) || [];
-                mensajes.unshift({ 
-                    nombre: nombre, 
-                    fecha: new Date().toLocaleDateString('es-ES'), 
-                    texto: texto 
-                });
-                // Limitar a 50 mensajes locales
-                if (mensajes.length > 50) mensajes = mensajes.slice(0, 50);
-                localStorage.setItem('mensajesPublicos', JSON.stringify(mensajes));
-                
-                // Limpiar y recargar
-                document.getElementById('mensajePublicoTexto').value = '';
-                cargarMensajesPublicos();
-                
-                alert('¡Gracias por tu mensaje! 💝');
-                btn.innerText = textoOriginal;
-                btn.disabled = false;
-            }).catch(error => {
-                console.error('Error:', error);
-                alert('Hubo un error al guardar tu mensaje. Por favor, intenta de nuevo.');
-                btn.innerText = textoOriginal;
-                btn.disabled = false;
-            });
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ action: 'mensajePublico', nombre: nombre, mensaje: texto })
+            }).catch(error => console.log('No se pudo guardar en Google Sheets:', error));
+            
+            mostrarModalConScroll(
+                '💌 Mensaje enviado',
+                `${nombre}, gracias por tu hermosa bendición. 💝\n\n"${texto}"\n\nLos novios atesoran tus palabras. ✨`,
+                false
+            );
+            
+            btn.innerHTML = textoOriginal;
+            btn.disabled = false;
         }
 
-        // ========== MENSAJES PRIVADOS (Solo novios) ==========
-        function verificarPassword() {
-            const password = document.getElementById('passwordInput').value;
-            if (password === PASSWORD) {
-                isAdminMode = true;
-                document.getElementById('passwordPrompt').style.display = 'none';
-                document.getElementById('mensajesPrivadosContainer').classList.add('visible');
-                cargarMensajesPrivados();
-            } else {
-                document.getElementById('passwordError').style.display = 'block';
-                setTimeout(() => {
-                    document.getElementById('passwordError').style.display = 'none';
-                }, 2000);
-            }
+        function mostrarModalConScroll(titulo, mensaje, regresarAVideo = false) {
+            const modal = document.getElementById('modalAgradecimiento');
+            const modalTitulo = document.getElementById('modalTitulo');
+            const modalMensaje = document.getElementById('modalMensaje');
+            const modalIcon = document.querySelector('#modalAgradecimiento .modal-content i');
+            
+            modalTitulo.innerText = titulo;
+            modalMensaje.innerText = mensaje;
+            modalIcon.className = 'fas fa-heart';
+            modalIcon.style.color = '#D4586A';
+            
+            modal.classList.add('visible');
+            
+            window.volverAVideoAlCerrar = regresarAVideo;
         }
 
-        function cargarMensajesPrivados() {
-            let comentarios = JSON.parse(localStorage.getItem('comentariosBodaPrivados')) || [];
-            const grid = document.getElementById('comentariosGridPrivados');
-            if (comentarios.length === 0) {
-                grid.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--texto-oscuro);">No hay mensajes aún.</div>';
-                return;
-            }
-            grid.innerHTML = comentarios.map((c, index) => `
-                <div class="comentario-card-privado" data-id="${index}">
-                    <button class="edit-btn" onclick="abrirModalEditar(${index})"><i class="fas fa-pencil-alt"></i></button>
-                    <button class="delete-btn" onclick="eliminarMensajePrivado(${index})"><i class="fas fa-trash-alt"></i></button>
-                    <strong>${escapeHtml(c.nombre)}</strong><br>
-                    <small>${c.fecha}</small>
-                    <p>"${escapeHtml(c.texto)}"</p>
-                </div>
-            `).join('');
-        }
-
-        function agregarComentarioPrivado(nombre, texto) {
-            let comentarios = JSON.parse(localStorage.getItem('comentariosBodaPrivados')) || [];
-            comentarios.unshift({ nombre, texto, fecha: new Date().toLocaleString() });
-            localStorage.setItem('comentariosBodaPrivados', JSON.stringify(comentarios));
-            if (isAdminMode) cargarMensajesPrivados();
-        }
-
-        function editarMensajePrivado(index, nuevoTexto) {
-            let comentarios = JSON.parse(localStorage.getItem('comentariosBodaPrivados')) || [];
-            if (comentarios[index]) {
-                comentarios[index].texto = nuevoTexto;
-                comentarios[index].editado = true;
-                comentarios[index].editadoFecha = new Date().toLocaleString();
-                localStorage.setItem('comentariosBodaPrivados', JSON.stringify(comentarios));
-                cargarMensajesPrivados();
-            }
-        }
-
-        function eliminarMensajePrivado(index) {
-            if (confirm('¿Eliminar este mensaje permanentemente?')) {
-                let comentarios = JSON.parse(localStorage.getItem('comentariosBodaPrivados')) || [];
-                comentarios.splice(index, 1);
-                localStorage.setItem('comentariosBodaPrivados', JSON.stringify(comentarios));
-                cargarMensajesPrivados();
-            }
-        }
-
-        function abrirModalEditar(index) {
-            let comentarios = JSON.parse(localStorage.getItem('comentariosBodaPrivados')) || [];
-            if (comentarios[index]) {
-                mensajeEditandoId = index;
-                document.getElementById('editarTexto').value = comentarios[index].texto;
-                document.getElementById('modalEditar').classList.add('visible');
-            }
-        }
-
-        function guardarEdicion() {
-            if (mensajeEditandoId !== null) {
-                const nuevoTexto = document.getElementById('editarTexto').value;
-                editarMensajePrivado(mensajeEditandoId, nuevoTexto);
-                cerrarModalEditar();
-            }
-        }
-
-        function cerrarModalEditar() {
-            document.getElementById('modalEditar').classList.remove('visible');
-            mensajeEditandoId = null;
-        }
-
-        // ========== FUNCIONES EXISTENTES ==========
         let animacionEnProgreso = false;
         
         function abrirSobre() {
@@ -1533,17 +1380,6 @@
                 }, 150);
             }, 500);
         }
-        
-        window.addEventListener('DOMContentLoaded', () => {
-            const imagenesCriticas = [
-                'Fotos/1.jpg', 'Fotos/2.jpg', 'Fotos/3.jpg',
-                'Fotos/4.jpg', 'Fotos/5.jpg', 'Fotos/Iglesia.jpg'
-            ];
-            imagenesCriticas.forEach(src => {
-                const img = new Image();
-                img.src = src;
-            });
-        });
 
         function copiarTexto(texto) {
             navigator.clipboard.writeText(texto);
@@ -1554,73 +1390,112 @@
 
         function verificarConfirmacionPrevia() {
             const confirmaciones = JSON.parse(localStorage.getItem('confirmacionesBoda')) || {};
-            if (confirmaciones[codigoInvitado]) {
+            const clave = nombreInvitado || codigoInvitado;
+            if (confirmaciones[clave] || (nombreInvitado && confirmaciones[nombreInvitado])) {
                 document.getElementById('mensajeConfirmacionPrevia').style.display = 'block';
                 document.getElementById('formularioConfirmacion').style.display = 'none';
             }
         }
 
-                function enviarConfirmacion() {
+        function crearConfeti() {
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const confeti = document.createElement('div');
+                    confeti.className = 'confeti';
+                    confeti.style.left = Math.random() * 100 + '%';
+                    confeti.style.width = (Math.random() * 8 + 4) + 'px';
+                    confeti.style.height = (Math.random() * 12 + 6) + 'px';
+                    confeti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                    confeti.style.background = `linear-gradient(135deg, ${['#D4586A', '#E8A35E', '#B87B9E', '#F5E0E8'][Math.floor(Math.random() * 4)]}, ${['#E8A35E', '#D4586A', '#F5E0E8', '#B87B9E'][Math.floor(Math.random() * 4)]})`;
+                    document.body.appendChild(confeti);
+                    setTimeout(() => confeti.remove(), 3000);
+                }, i * 30);
+            }
+        }
+
+        function mostrarNotificacion(mensaje) {
+            const notificacion = document.createElement('div');
+            notificacion.className = 'notificacion-flotante';
+            notificacion.innerHTML = `<i class="fas fa-info-circle"></i> ${mensaje}`;
+            document.body.appendChild(notificacion);
+            setTimeout(() => notificacion.remove(), 3000);
+        }
+
+        async function enviarConfirmacion() {
             const asistencia = document.getElementById('asistencia').value;
-            const acompanantes = document.getElementById('acompanantes').value;
-            const nombre = document.getElementById('confirmacionNombre').value;
+            let nombre = document.getElementById('confirmacionNombre').value.trim();
             
             if (!asistencia) { 
-                alert('Selecciona si vas a asistir'); 
+                mostrarNotificacion('❓ Por favor, selecciona si vas a asistir');
                 return; 
             }
             
-            if (!nombre || nombre === "INVITADO") {
-                alert('Por favor, escribe tu nombre completo en el campo de nombre');
-                return;
+            if (!nombre) { 
+                mostrarNotificacion('❓ Por favor, escribe tu nombre completo');
+                return; 
             }
             
-            // Mostrar loading
             const btn = event.target;
-            const textoOriginal = btn.innerText;
-            btn.innerText = 'Enviando...';
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Procesando...';
             btn.disabled = true;
+
+            let confirmaciones = JSON.parse(localStorage.getItem('confirmacionesBoda')) || {};
+            confirmaciones[nombre] = { 
+                nombre: nombre, 
+                asistencia: asistencia, 
+                fecha: new Date().toLocaleString() 
+            };
+            localStorage.setItem('confirmacionesBoda', JSON.stringify(confirmaciones));
+
+            try {
+                await fetch(APPS_SCRIPT_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        action: 'confirmar', 
+                        nombre: nombre, 
+                        asistencia: asistencia === 'si' ? 'Sí' : 'No' 
+                    })
+                });
+            } catch(e) { 
+                console.warn("No se pudo sincronizar con Google Sheets:", e); 
+            }
+
+            btn.innerHTML = originalText;
+            btn.disabled = false;
             
-            // Enviar a Google Sheets
-            fetch(APPS_SCRIPT_URL, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    action: 'confirmar',
-                    nombre: nombre,
-                    asistencia: asistencia === 'si' ? 'Sí' : 'No',
-                    acompanantes: acompanantes || '0'
-                })
-            }).then(() => {
-                // Guardar también en localStorage para no mostrar el formulario otra vez
-                const confirmaciones = JSON.parse(localStorage.getItem('confirmacionesBoda')) || {};
-                confirmaciones[nombre] = { nombre, asistencia, acompanantes, fecha: new Date().toLocaleString() };
-                localStorage.setItem('confirmacionesBoda', JSON.stringify(confirmaciones));
-                
-                // Mostrar modal de agradecimiento
-                const modal = document.getElementById('modalAgradecimiento');
-                document.getElementById('modalTitulo').innerText = asistencia === 'si' ? '¡Gracias!' : 'Lamentamos';
-                document.getElementById('modalMensaje').innerText = asistencia === 'si' ? 'Te esperamos en Guanajuato. ¡Gracias por confirmar!' : 'Lamentamos que no puedas venir, ¡gracias por avisarnos!';
-                modal.classList.add('visible');
-                
-                // Ocultar formulario
-                document.getElementById('mensajeConfirmacionPrevia').style.display = 'block';
-                document.getElementById('formularioConfirmacion').style.display = 'none';
-                
-                btn.innerText = textoOriginal;
-                btn.disabled = false;
-            }).catch(error => {
-                console.error('Error:', error);
-                alert('Hubo un error al guardar tu confirmación. Por favor, intenta de nuevo.');
-                btn.innerText = textoOriginal;
-                btn.disabled = false;
-            });
+            if (asistencia === 'si') {
+                crearConfeti();
+                mostrarModalConScroll(
+                    '🎉 ¡Gracias por confirmar!',
+                    `${nombre}, gracias por confirmar tu asistencia. 💝\n\nTe esperamos en Guanajuato para celebrar juntos este día tan especial. ✨`,
+                    true
+                );
+            } else {
+                mostrarModalConScroll(
+                    '💔 Gracias por avisarnos',
+                    `${nombre}, lamentamos que no puedas venir. Te extrañaremos y esperamos verte pronto. ✨`,
+                    true
+                );
+            }
+            
+            document.getElementById('mensajeConfirmacionPrevia').style.display = 'block';
+            document.getElementById('formularioConfirmacion').style.display = 'none';
         }
 
-        function cerrarModal() { document.getElementById('modalAgradecimiento').classList.remove('visible'); }
+        function cerrarModalYVolverAlInicio() {
+            const modal = document.getElementById('modalAgradecimiento');
+            modal.classList.remove('visible');
+            
+            if (window.volverAVideoAlCerrar) {
+                const videoSection = document.querySelector('.hero-section');
+                if (videoSection) {
+                    videoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                window.volverAVideoAlCerrar = false;
+            }
+        }
 
         function escapeHtml(str) {
             if (!str) return '';
