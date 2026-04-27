@@ -998,8 +998,7 @@
     </div>
 
     <audio id="audioFondo" loop>
-        <source src="Musica/Cancion.MP3" type="audio/mp3">
-        <source src="Musica/Cancion.wav" type="audio/wav">
+        <source src="Musica/Cancion.MP3" type="audio/mpeg">
     </audio>
     <button id="btnAudio" class="btn-copiar btn-audio" onclick="toggleAudio()"><i class="fas fa-music"></i> Activar música</button>
 
@@ -1129,7 +1128,7 @@
                 </div>
                 <div class="historia-card">
                     <div class="imagen"><img src="Fotos/5.jpg" alt="Foto 5"></div>
-                    <div class="texto"><i class="fas fa-feather-alt"></i><p>"A veces, las decisiones más hermosas nacen en medio de las tormentas. Durante una etapa difícil para nosotros, decidimos pausar el mundo, escapar y regalarnos una nueva aventura. Nos lanzamos en parapente en Valle de Bravo..."</p></div>
+                    <div class="texto"><i class="fas fa-feather-alt"></i><p>"A veces, las decisiones más hermosas nacen en medio de las tormentas. Durante una etapa difícil para nosotros, decidimos pausar el mundo, escapar y regalarnos una nueva aventura. Nos lanzamos en parapente en Valle de Bravo, soltando el control y dejando que el viento nos guiará mientras fluíamos libres en la inmensidad del cielo. Al aterrizar, aún vibrando de adrenalina pero de nuevo con los pies firmes sobre la tierra, llegó la verdadera magia: un anillo que selló nuestra promesa. Ahí, justo donde terminó el vuelo y empezó nuestro camino, confirmamos nuestra intención de avanzar juntos para siempre."</p></div>
                 </div>
             </section>
 
@@ -1212,8 +1211,8 @@
 
         let nombreInvitado = "", codigoInvitado = "";
         let audioActivo = false;
-        const PASSWORD = "julissayjorge2026";
-	const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxZ8_9lNgjv6glEMobt3PzXvWUDxTDwnqED_Q6vnL3n4NT7tX4iAyZVkBr9T01i7KgH5Q/exec";
+        const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwjb3f_I2V7iMkvG6gT5SJKO7UP-_4jqDoD4yyO61uqpr7R3kpO2sdYJ_xOCxIzvq00hQ/exec";
+
         const audio = document.getElementById('audioFondo');
         const btnAudio = document.getElementById('btnAudio');
 
@@ -1316,14 +1315,13 @@
             document.getElementById('mensajePublicoTexto').value = '';
             cargarMensajesPublicos();
             
-         fetch(APPS_SCRIPT_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ action: 'mensajePublico', nombre: nombre, mensaje: texto })
-})
-.then(response => response.json())
-.then(data => console.log('Guardado en Sheets:', data))
-.catch(error => console.error('Error:', error));
+            // Enviar a Google Sheets con no-cors para evitar CORS
+            fetch(APPS_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ action: 'mensajePublico', nombre: nombre, mensaje: texto })
+            }).catch(error => console.log('Error de red:', error));
             
             mostrarModalConScroll(
                 '💌 Mensaje enviado',
@@ -1449,19 +1447,13 @@
             };
             localStorage.setItem('confirmacionesBoda', JSON.stringify(confirmaciones));
 
-            try {
-                await fetch(APPS_SCRIPT_URL, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ 
-                        action: 'confirmar', 
-                        nombre: nombre, 
-                        asistencia: asistencia === 'si' ? 'Sí' : 'No' 
-                    })
-                });
-            } catch(e) { 
-                console.warn("No se pudo sincronizar con Google Sheets:", e); 
-            }
+            // Enviar a Google Sheets con no-cors para evitar CORS
+            fetch(APPS_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ action: 'confirmar', nombre: nombre, asistencia: asistencia === 'si' ? 'Sí' : 'No' })
+            }).catch(e => console.warn("Error de red:", e));
 
             btn.innerHTML = originalText;
             btn.disabled = false;
