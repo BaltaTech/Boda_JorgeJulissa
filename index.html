@@ -998,7 +998,7 @@
     </div>
 
     <audio id="audioFondo" loop>
-        <source src="Musica/Cancion.mp3" type="audio/mpeg">
+        <source src="Musica/Cancion.mp3" type="audio/mp3">
         <source src="Musica/Cancion.wav" type="audio/wav">
     </audio>
     <button id="btnAudio" class="btn-copiar btn-audio" onclick="toggleAudio()"><i class="fas fa-music"></i> Activar música</button>
@@ -1317,12 +1317,14 @@
             document.getElementById('mensajePublicoTexto').value = '';
             cargarMensajesPublicos();
             
-            fetch(APPS_SCRIPT_URL, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ action: 'mensajePublico', nombre: nombre, mensaje: texto })
-            }).catch(error => console.log('No se pudo guardar en Google Sheets:', error));
+         fetch(APPS_SCRIPT_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ action: 'mensajePublico', nombre: nombre, mensaje: texto })
+})
+.then(response => response.json())
+.then(data => console.log('Guardado en Sheets:', data))
+.catch(error => console.error('Error:', error));
             
             mostrarModalConScroll(
                 '💌 Mensaje enviado',
